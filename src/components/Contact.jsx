@@ -4,11 +4,12 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 
 export function Contact() {
+    const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
         Fname: "",
         Lname: "",
         email: "",
-        Phone: "",
+        phone: "",
         project: "",
         message: ""
     });
@@ -21,25 +22,36 @@ export function Contact() {
     };
 
     const handleSubmit = async (e) => {
+        setLoading(true);
         e.preventDefault();
 
-        const res = await fetch("http://localhost:3000/api/contact", {
-            method:"POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(form)
-        });
+        try {
+            const res = await fetch("http://localhost:3000/api/contact", {
+                method:"POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(form)
+            })
+                .then(()=> {
+                    setLoading(false);
+                });
 
         const data = await res.json();
 
         if (data.success) {
             alert("Message sent successfully!");
-            setForm({  Fname: "", Lname: "", email: "", Phone: "", project: "", message: "" });
+            setForm({  Fname: "", Lname: "", email: "", phone: "", project: "", message: "" });
         }else {
             alert("Error sending message");
         }
-    }
+
+        } catch(error) {
+            console.log(error);
+            alert("Server error");
+        }
+        
+    };
     return (
         <section id="contact" className="py-20 bg-gray-50">
             <motion.div
@@ -126,12 +138,12 @@ export function Contact() {
                                     Phone
                                 </label>
                                 <input
-                                    type="tel"
+                                    type="text"
                                     id="phone"
                                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600"
-                                    placeholder="+91 "
+                                    placeholder="+91"
                                     name='phone'
-                                    value={form.Phone}
+                                    value={form.phone}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -172,10 +184,11 @@ export function Contact() {
                             </div>
               
                             <button
+                                disabled={loading}
                                 type="submit"
                                 className="w-full bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition-colors"
                             >
-                                Send Message
+                                {loading ? "Sending..." : "Send Message"}
                             </button>
                         </motion.form>
                     </div>
@@ -194,10 +207,10 @@ export function Contact() {
                                 <div>
                                     <h3 className="text-xl mb-2">Address</h3>
                                     <p className="text-gray-600">
-                                        Rajmudra Projects & Constuction pvt.lmt<br />
-                                        ITI Square, behinde the Government Library,<br />
+                                        Rajmudra Projects & Construction pvt.lmt<br />
+                                        ITI Square, behind the Government Library,<br />
                                         Gadchiroli- 442605
-                                        Maharastra
+                                        Maharashtra
                                     </p>
                                 </div>
                             </div>

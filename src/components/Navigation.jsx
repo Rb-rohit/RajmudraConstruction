@@ -18,7 +18,7 @@ export function Navigation() {
                         <div className="flex-shrink-0">
                             <span className="">
                                 <img src={assets.logo} 
-                                    className='w-30 h-30 sm:h-35 sm:w-40' alt=''/>
+                                    className='w-30 h-30 sm:h-15 sm:w-45' alt=''/>
                             </span>
                         </div>
                     </div>

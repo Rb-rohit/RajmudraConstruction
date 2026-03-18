@@ -20,9 +20,9 @@ export function Footer() {
                     >
                         <span
                         className="">
-                            <img src={assets.logo}  className='w-30 h-30 sm:h-50 sm:w-50'/>
+                            <img src={assets.logo}  className='w-30 h-30 sm:h-24 sm:w-60'/>
                         </span>
-                        <p className="text-gray-400">
+                        <p className="text-gray-400 mt-3">
                             Building excellence with quality, integrity, and innovation since 2001.
                         </p>
                     </motion.div>
