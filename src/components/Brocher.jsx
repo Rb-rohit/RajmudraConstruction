@@ -164,10 +164,10 @@ doc.text("Building Excellence & Trust", 60, 25);
   doc.setTextColor(0, 0, 0);
   doc.setFontSize(14);
 
-  doc.text("5+ Years Experience", 20, 80);
-  doc.text("200+ Projects Completed", 20, 95);
-  doc.text("98% On-Time Delivery", 20, 110);
-  doc.text("100% Client Satisfaction", 20, 125);
+  doc.text("5+ Years Experience", 20, 70);
+  doc.text("200+ Projects Completed", 20, 85);
+  doc.text("98% On-Time Delivery", 20, 100);
+  doc.text("100% Client Satisfaction", 20, 115);
 
   // CONTACT
   doc.setFontSize(18);
@@ -175,11 +175,22 @@ doc.text("Building Excellence & Trust", 60, 25);
   doc.text("Contact Us", 20, 160);
 
   doc.setFontSize(14);
-  doc.text(" +91 9876543210", 20, 180);
+  doc.setTextColor(0, 0, 0);
+  doc.text("Phone:-", 20, 170);
+  doc.text(" +91 9876543210", 39, 175);
+  doc.text("+91 9764346394", 40, 185);        
+  doc.text("+91 8668490973", 40, 195);
 
   doc.setTextColor(0, 0, 0);
-  doc.text(" Nagpur, Maharashtra", 20, 195);
-  doc.text(" info@rajmudra.com", 20, 210);
+  doc.text("Address:-", 20, 205);
+  doc.text(" Rajmudra Projects & Construction pvt.lmt", 50, 210);
+  doc.text(" ITI Square, behind the Government Library,", 50, 220);
+  doc.text(" Gadchiroli- 442605 Maharashtra", 50, 230);
+  doc.text("Email:-", 20, 240);
+  doc.text(" rajmudraprojectgad01@gmail.com", 49, 245);
+  
+  doc.text("Web site:-", 20, 255);
+  doc.text("Rajmudra.com", 50, 260);
 
   // =========================
   //  SAVE
