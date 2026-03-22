@@ -1,5 +1,6 @@
 import { Award, Users, Clock, CheckCircle } from 'lucide-react';
 import { motion } from 'motion/react';
+import downloadPDF from './Brocher';
 
 const stats = [
     { icon: Award, value: '5+', label: 'Years Experience' },
@@ -9,6 +10,8 @@ const stats = [
 ];
 
 export function About() {
+
+        
     return (
         <section id="about" className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +48,7 @@ export function About() {
                             transition={{duration:0.5, delay:0.8}}
                             viewport={{once:true}} 
                             className="flex items-center gap-3">
-                                <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                                <CheckCircle className="w-6 h-6 flex-shrink-0" style={{ color: "#ea580c" }}  />
                                 <span className="text-gray-700">Licensed and fully insured contractors</span>
                             </motion.div>
                             <motion.div
@@ -54,7 +57,7 @@ export function About() {
                             transition={{duration:0.5, delay:0.9}}
                             viewport={{once:true}} 
                             className="flex items-center gap-3">
-                                <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                                <CheckCircle className="w-6 h-6 flex-shrink-0" style={{ color: "#ea580c" }}  />
                                 <span className="text-gray-700">Sustainable and eco-friendly building practices</span>
                             </motion.div>
                             <motion.div
@@ -63,10 +66,19 @@ export function About() {
                             transition={{duration:0.5, delay:1}}
                             viewport={{once:true}} 
                             className="flex items-center gap-3">
-                                <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                                <CheckCircle className="w-6 h-6 flex-shrink-0" style={{ color: "#ea580c" }}  />
                                 <span className="text-gray-700">Transparent pricing with no hidden costs</span>
                             </motion.div>
                         </div>
+
+                        {/* DOWNLOAD BUTTON */}
+                        <button
+                          onClick={downloadPDF}
+                          style={{ backgroundColor: "#f97316", color: "#fff" }}
+                          className="px-6 py-3 rounded-lg mt-8"
+                        >
+                          Download Company Profile
+                        </button>
                     </div>
           
                     <div>
@@ -89,17 +101,18 @@ export function About() {
                         viewport={{once:true}} 
                         key={index} className="text-center">
                             <div className="flex justify-center mb-4">
-                                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                                    <Icon className="w-8 h-8 text-orange-600" />
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: "#ffedd5" }}>
+                                    <Icon className="w-8 h-8" style={{ color: "#ea580c" }}  />
                                 </div>
                             </div>
-                            <div className="text-4xl mb-2 text-orange-600">{stat.value}</div>
+                            <div className="text-4xl mb-2" style={{ color: "#ea580c" }} >{stat.value}</div>
                             <div className="text-gray-600">{stat.label}</div>
                         </motion.div>
                     );
                     })}
                 </div>
             </div>
+
         </section>
     );
 }

@@ -56,8 +56,10 @@ export function Navigation() {
                     <a href="#projects" className="block px-3 py-2 text-gray-900 hover:bg-orange-50 hover:text-orange-600 rounded-md">Projects</a>
                     <a href="#about" className="block px-3 py-2 text-gray-900 hover:bg-orange-50 hover:text-orange-600 rounded-md">About</a>
                     <a href="#contact" className="block px-3 py-2 text-gray-900 hover:bg-orange-50 hover:text-orange-600 rounded-md">Contact</a>
-                    <a href="tel:+1234567890" className="block px-3 py-2 text-center bg-orange-600 text-white rounded-md hover:bg-orange-700">
-                        call us on 9921923609
+                    <a href="tel:+9876543210" className="block px-3 py-2 text-center bg-orange-600 text-white rounded-md hover:bg-orange-700">
+                        call us on +91 9876543210
+                                    +91 9764346394
+                                    +91 8668490973
                     </a>
                 </div>
             </div>
