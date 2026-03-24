@@ -23,7 +23,7 @@ export function Footer() {
                             <img src={assets.logo}  className='w-30 h-30 sm:h-24 sm:w-60'/>
                         </span>
                         <p className="text-gray-400 mt-3">
-                            Building excellence with quality, integrity, and innovation since 2001.
+                            Building excellence with quality, integrity, and innovation since 2026.
                         </p>
                     </motion.div>
           
@@ -72,7 +72,8 @@ export function Footer() {
                 </div>
         
                 <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-                    <p>&copy; 2026 Rajmudra Construction. All rights reserved.</p>
+                    <p>&copy; 2026 Rajmudra Construction. All rights reserved.</p> <br></br>
+                    <p>&copy; Rb.rohit744 Developer</p>
                 </div>
             </motion.div>
         </footer>

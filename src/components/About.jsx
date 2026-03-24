@@ -3,8 +3,8 @@ import { motion } from 'motion/react';
 import downloadPDF from './Brocher';
 
 const stats = [
-    { icon: Award, value: '5+', label: 'Years Experience' },
-    { icon: Users, value: '200+', label: 'Projects Completed' },
+    { icon: Award, value: '1+', label: 'Years Experience' },
+    { icon: Users, value: '5+', label: 'Projects Completed' },
     { icon: Clock, value: '98%', label: 'On-Time Delivery' },
     { icon: CheckCircle, value: '100%', label: 'Client Satisfaction' },
 ];
@@ -73,14 +73,14 @@ export function About() {
 
                         {/* DOWNLOAD BUTTON */}
                         <button
-                          onClick={downloadPDF}
-                          style={{ backgroundColor: "#f97316", color: "#fff" }}
-                          className="px-6 py-3 rounded-lg mt-8"
+                            onClick={downloadPDF}
+                            style={{ color: "#fff" }}
+                            className="px-6 py-3 rounded-lg mt-8 bg-orange-600 hover:bg-orange-700"
                         >
-                          Download Company Profile
+                            Download Company Profile
                         </button>
                     </div>
-          
+            
                     <div>
                         <img
                             src="https://images.unsplash.com/photo-1758798349125-5c297b18b8b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB0ZWFtJTIwd29ya2Vyc3xlbnwxfHx8fDE3NzIxNjU2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"

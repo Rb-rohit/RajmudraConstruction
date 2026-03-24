@@ -15,7 +15,7 @@ const downloadPDF = async () => {
   doc.setGState(new doc.GState({ opacity: 1 }));
 };
 
-  // 🔧 LOAD IMAGE
+  //  LOAD IMAGE
   const loadImage = (url) =>
     new Promise((resolve) => {
       const img = new Image();
@@ -25,19 +25,19 @@ const downloadPDF = async () => {
     });
 
     const logo = await loadImage(assets.logo);
- // 🟠 HEADER BACKGROUND STRIP
+ //  HEADER BACKGROUND STRIP
 doc.setFillColor(249, 115, 22);
 doc.rect(0, 0, 210, 30, "F");
 
-// 🏢 LOGO (LEFT)
+//  LOGO (LEFT)
 doc.addImage(logo, "PNG", 10, 5, 40, 20);
 
-// 🏷️ COMPANY NAME (RIGHT SIDE OF LOGO)
+// COMPANY NAME (RIGHT SIDE OF LOGO)
 doc.setTextColor(255, 255, 255);
 doc.setFontSize(18);
 doc.text("RAJMUDRA CONSTRUCTION", 60, 18);
 
-// 🧾 TAGLINE
+//  TAGLINE
 doc.setFontSize(10);
 doc.text("Building Excellence & Trust", 60, 25);
 

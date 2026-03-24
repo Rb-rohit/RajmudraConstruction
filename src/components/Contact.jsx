@@ -117,7 +117,7 @@ export function Contact() {
                                     />
                                 </div>
                             </div>
-              
+                            
                             <div>
                                 <label htmlFor="email" className="block text-gray-700 mb-2">
                                     Email
@@ -132,7 +132,7 @@ export function Contact() {
                                     onChange={handleChange}
                                 />
                             </div>
-              
+
                             <div>
                                 <label htmlFor="phone" className="block text-gray-700 mb-2">
                                     Phone
@@ -147,7 +147,7 @@ export function Contact() {
                                     onChange={handleChange}
                                 />
                             </div>
-              
+
                             <div>
                                 <label htmlFor="projectType" className="block text-gray-700 mb-2">
                                     Project Type
@@ -167,7 +167,7 @@ export function Contact() {
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-              
+                            
                             <div>
                                 <label htmlFor="message" className="block text-gray-700 mb-2">
                                     Message
@@ -181,8 +181,8 @@ export function Contact() {
                                     value={form.message}
                                     onChange={handleChange}
                                 />
+
                             </div>
-              
                             <button
                                 disabled={loading}
                                 type="submit"
@@ -192,7 +192,7 @@ export function Contact() {
                             </button>
                         </motion.form>
                     </div>
-          
+
                     <div className="space-y-8">
                         <motion.div
                         initial={{opacity:0, y:30}}

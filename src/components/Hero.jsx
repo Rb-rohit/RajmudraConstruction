@@ -28,7 +28,7 @@ export function Hero() {
                 transition={{duration:0.6, delay:0.8}}
                 viewport={{once:true}} 
                 className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                    Premier construction services with over 5 years of excellence in residential, commercial, and industrial projects
+                    Premier construction services with over 1 year of excellence in residential, commercial, and industrial projects
                 </motion.p>
                 <motion.div
                 initial={{opacity:0, y:30}}
