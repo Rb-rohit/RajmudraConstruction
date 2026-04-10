@@ -24,7 +24,7 @@ const downloadPDF = async () => {
       img.onload = () => resolve(img);
     });
 
-    const logo = await loadImage(assets.logo);
+    const logo = await loadImage(assets.footer);
  //  HEADER BACKGROUND STRIP
 doc.setFillColor(249, 115, 22);
 doc.rect(0, 0, 210, 30, "F");
